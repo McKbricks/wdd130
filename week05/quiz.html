@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A four-question HTML and CSS quiz for WDD 130.">
+    <meta name="author" content="Brantley McKnight">
+    <title>HTML and CSS Quiz | WDD 130</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <main>
+        <h1>HTML and CSS Quiz</h1>
+
+        <form>
+            <div class="question">
+                <label for="q1">1. Which HTML attribute connects a label to a form field?</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+
+            <div class="question">
+                <label for="q2">2. What is the difference between margin and padding in CSS?</label>
+                <textarea id="q2" name="q2" rows="4" required></textarea>
+            </div>
+
+            <div class="question">
+                <label for="q3">3. Which CSS declaration turns an element into a flex
+                    container?</label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled>Choose an answer</option>
+                    <option value="block">display: block;</option>
+                    <option value="flex">display: flex;</option>
+                    <option value="grid">display: grid;</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="q4">4. How many heading levels does HTML define?</label>
+                <input type="number" id="q4" name="q4" step="1" required>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+</body>
+
+</html>
