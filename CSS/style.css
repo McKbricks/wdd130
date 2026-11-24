@@ -1,63 +1,64 @@
-main {
-    max-width: 840px;
-}
-
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    /* 1️⃣ */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
-}
-
-aside img {
-    width: 200px;
-    height: auto;
-}
-
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px grey;
-}
-
-p {
-    padding: 0;
-}
-
-footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-main {
+header,
+.grid,
+footer {
     max-width: 840px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    background-color: #315d7f;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid steelblue;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    grid-column: 2 / 3;
+    min-width: 0;
+    margin: 1rem;
 }
 
 main img {
+    float: right;
     width: 150px;
     max-width: 100%;
     height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px grey;
-    float: right;
     margin: 0 0 1rem 1rem;
+    padding: 2px;
+    border: 1px solid steelblue;
+    box-shadow: 0 0 30px grey;
 }
 
 aside {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     position: relative;
     width: 20rem;
     max-width: calc(100% - 2rem);
@@ -81,7 +82,6 @@ aside h2 {
 }
 
 footer {
-    margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
 }
@@ -100,40 +100,11 @@ ul.box {
     padding-left: 2rem;
 }
 
-main {
-    max-width: 840px;
-}
+@media (max-width: 700px) {
 
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    /* 1️⃣ */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
-}
-
-aside img {
-    width: 200px;
-    height: auto;
-}
-
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px grey;
-}
-
-p {
-    padding: 0;
-}
-
-footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+    main,
+    aside {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
 }
